@@ -33,12 +33,6 @@ def extract(basepath, outputfile_name):
     data = {}
     tudo = {}
 
-    games = dict()
-
-    # counter = 0
-    tudo['todos'] = []
-    data['cervejarias'] = []
-
     linhas = []
 
     for root, _, files in os.walk(basepath):
@@ -157,7 +151,7 @@ def extract(basepath, outputfile_name):
         json.dump(linhas, outputfile)
 
 def main():
-    parser = argparse.ArgumentParser(description='Crawler of Steam game ids and names')
+    parser = argparse.ArgumentParser(description='Crawler of Steam  ids and names')
     parser.add_argument(
         '-i', '--input', help='Input file or path (all files in subpath are processed)', default='./data/pages/pagina',
         required=False)

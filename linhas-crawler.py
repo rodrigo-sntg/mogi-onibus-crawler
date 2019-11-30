@@ -71,12 +71,12 @@ def extract(basepath, outputfile_name):
     
 
 def main():
-    parser = argparse.ArgumentParser(description='Crawler of Steam game ids and names')
+    parser = argparse.ArgumentParser(description='Crawler of Steam  ids and names')
     parser.add_argument(
-        '-i', '--input', help='Input file or path (all files in subpath are processed)', default='./data/pages/games',
+        '-i', '--input', help='Input file or path (all files in subpath are processed)', default='./data/pages/s',
         required=False)
     parser.add_argument(
-        '-o', '--output', help='Output file', default='./data/games.csv', required=False)
+        '-o', '--output', help='Output file', default='./data/s.csv', required=False)
     args = parser.parse_args()
 
     logging.basicConfig(filename='export.log',level=logging.DEBUG)
